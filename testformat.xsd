@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<xs:element name="Component" type="Component" /> 
+<xs:complexType name="Component">  
+    
+      <xs:attribute name="Name" type="xs:string" use="required"/>
+      <xs:attribute name="ID" type="xs:string" use="required"/>
+      <xs:attribute name="Type" type="xs:string" use="required"/>
+   
+</xs:complexType>
+
+<xs:element name="Button" type="Button" /> 
+<xs:complexType name="Button">
+  <xs:complexContent>
+    <xs:extension base="Component" >
+      <xs:sequence>
+        <xs:element name="text" type="xs:string" />
+        <xs:element name="colour" type="xs:string" />
+        <xs:element name="flat" type="xs:string" />
+      </xs:sequence>
+    </xs:extension>
+  </xs:complexContent>
+</xs:complexType>
+
+<xs:element name="Checkbox" type="Checkbox" /> 
+<xs:complexType name="Checkbox">
+  <xs:complexContent>
+    <xs:extension base="Component">
+      <xs:sequence>
+        <xs:element name="text" type="xs:string" />
+        <xs:element name="colour" type="xs:string" />
+        <xs:element name="checkstate" type="xs:boolean" />
+      </xs:sequence>
+    </xs:extension>
+  </xs:complexContent>
+</xs:complexType>
+
+<xs:simpleType name="valuelist">
+  <xs:list itemType="xs:string"/>
+</xs:simpleType>
+
+<xs:element name="Combobox" type="Combobox" /> 
+<xs:complexType name="Combobox">
+  <xs:complexContent>
+    <xs:extension base="Component">
+      <xs:sequence>
+        <xs:element name="currentIndex" type="xs:string" />
+        <xs:element name="datalist" type="valuelist" />        
+      </xs:sequence>
+    </xs:extension>
+  </xs:complexContent>
+</xs:complexType>
+
+<xs:element name="Item">
+  <xs:complexType>
+  <xs:sequence>
+    <xs:element name="checkbox1" type="Checkbox" />
+    <xs:element name="button1" type="Button" />
+    <xs:element name="Item1">
+      <xs:complexType>
+      <xs:sequence>
+        <xs:element name="checkbox2" type="Checkbox" />
+      </xs:sequence>
+      </xs:complexType>      
+    </xs:element>
+    <xs:element name="comboxbox1" type="Combobox" />
+    <xs:element name="button2">
+      <xs:complexType>
+        <xs:complexContent>
+          <xs:extension base="Button">
+            <xs:sequence>
+              <xs:element name="checkbox3" type="Checkbox" />
+              <xs:element name="combobox2" type="Combobox" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+    </xs:element>
+  </xs:sequence>
+  </xs:complexType>
+</xs:element>
+
+</xs:schema> 

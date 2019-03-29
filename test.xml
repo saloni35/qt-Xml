@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<Item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="testformat.xsd">
+  <checkbox1 Name="CvarBool" ID="1" Type="checkbox">
+    <text>checkbox1</text>
+    <colour>grey</colour>
+    <checkstate>true</checkstate>
+  </checkbox1>
+  <button1 Name="CvarAction" ID="2" Type="button">
+    <text>button1</text>
+    <colour>blue</colour>
+    <flat>true</flat>
+  </button1>
+  <Item1>
+    <checkbox2 Name="CvarBool" ID="1" Type="checkbox">
+      <text>checkbox2</text>
+      <colour>yellow</colour>
+      <checkstate>false</checkstate>
+    </checkbox2>
+  </Item1>
+  <comboxbox1 Name="CvarString" ID="3" Type="combobox">
+    <currentIndex>1</currentIndex>
+    <datalist>An Example of List</datalist>
+  </comboxbox1>
+  <button2 Name="CvarAction" ID="2" Type="button">
+  <text>button2</text>
+  <colour>blue</colour>
+  <flat>false</flat>
+  <checkbox3 Name="CvarBool" ID="1" Type="checkbox">
+    <text>checkbox3</text>
+    <colour>yellow</colour>
+    <checkstate>true</checkstate>
+  </checkbox3>
+  <combobox2 Name="CvarString" ID="3" Type="combobox">
+    <currentIndex>3</currentIndex>
+    <datalist>An Example of ComboList</datalist>
+  </combobox2>
+  </button2>
+</Item>
+
+
+
